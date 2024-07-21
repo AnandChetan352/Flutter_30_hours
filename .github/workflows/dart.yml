@@ -30,9 +30,8 @@ jobs:
       - name: Build APK
         run: flutter build apk --release
 
-      # Optionally, you can add steps to archive or upload the APK if needed
-      # - name: Archive APK
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: release-apk
-      #     path: build/app/outputs/flutter-apk/app-release.apk
+      - name: Archive APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
